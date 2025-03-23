@@ -3,13 +3,13 @@ An advanced PlayFab API so you can interact with playfab better with an editor t
 
 # How To Make / Login To An Accoount
 
-```cs
+```csharp
 PlayFabPlusCore.LoginWithCustomID();
 PlayFabPlusCore.LoginWithOculus();
 ```
 
 # How To Get The Coins
 
-```cs
+```csharp
 int coins = PlayFabPlusUtils.GetVirtualCurrency();
 ```
