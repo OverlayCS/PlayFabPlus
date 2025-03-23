@@ -5,4 +5,4 @@ working on wiki on how to use
 # Credits
 
 ## OverlayCS - Main Coder
-## Joker Josh - Inspiration
+## Joker Josh - Inspiration & Some Code
