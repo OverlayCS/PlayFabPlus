@@ -1,0 +1,5 @@
+handlers.GivePlayerCurrency = function GivePlayerCurrency(args)
+{
+    server.AddUserVirtualCurrency({PlayFabID: args.PlayerToGiveID, VirtualCurrency: args.CCode, Amount: args.AmountToGive});
+    return 'Gave Currency';
+}
