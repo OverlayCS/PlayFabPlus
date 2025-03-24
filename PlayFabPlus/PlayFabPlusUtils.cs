@@ -29,7 +29,7 @@ namespace PlayFab.PlayFabPlus
 		      var request = new PlayFabClientAPI.ExecuteCloudScriptRequest({
 			 FunctionName = "GivePlayerCurrency",
 			 FunctionParemeters = new {
-				 PlayerToGiveID = 
+				 PlayerToGiveID = PlayFabPlusCore.Get
 			 }
 			      
 		      });
