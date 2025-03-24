@@ -29,10 +29,16 @@ namespace PlayFab.PlayFabPlus
 		      var request = new PlayFabClientAPI.ExecuteCloudScriptRequest({
 			 FunctionName = "GivePlayerCurrency",
 			 FunctionParemeters = new {
-				 PlayerToGiveID = PlayFabPlusCore.Get
-			 }
-			      
+				 PlayerToGiveID = PlayFabPlusCore.GetPlayFabID(),
+				 CCode = PlayFabPlusUtils.GetCurrencyCode(),
+				 AmountToGive = amount
+			 }    
 		      });
+			PlayFabClientAPI.ExecuteCloudScript(request, success=>{
+				Debug.Log("Gave Currency Successfuly");
+			}, Error=>{
+				Debug.Log("Gave Currency Unsuccessfuly");
+			});
 	        {
     }
 
