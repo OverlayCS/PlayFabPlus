@@ -5,7 +5,7 @@ using PlayFab;
 using System;
 using PlayFab.PlayFabPlus;
 
-namespace Assets.PlayFabPlus
+namespace PlayFab.PlayFabPlus
 {
 	public class CoinService
 	{
@@ -26,7 +26,7 @@ namespace Assets.PlayFabPlus
         	}
 		public void AddVritualCurrency(int amount)
 		}
-		      //execute a cloud script
+		      
 	        {
     }
 
