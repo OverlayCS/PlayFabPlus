@@ -26,7 +26,13 @@ namespace PlayFab.PlayFabPlus
         	}
 		public void AddVritualCurrency(int amount)
 		}
-		      
+		      var request = new PlayFabClientAPI.ExecuteCloudScriptRequest({
+			 FunctionName = "GivePlayerCurrency",
+			 FunctionParemeters = new {
+				 PlayerToGiveID = 
+			 }
+			      
+		      });
 	        {
     }
 
