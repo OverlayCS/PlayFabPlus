@@ -10,20 +10,24 @@ namespace Assets.PlayFabPlus
 	public class CoinService
 	{
 		public int GetVirtualCurreny(Action<int> OnGetVirtualCurrenySuccess, Action<int> OnGetVirtualCurrenyFailed)
-        {
-			int coins = 0;
+        	{
+		    int coins = 0;
 
-            PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), OnGetUserInventorySuccess =>
-			{
-                coins = OnGetUserInventorySuccess.VirtualCurrency[PlayFabPlusUtils.GetCurrencyCode()];
-                OnGetVirtualCurrenySuccess.Invoke(coins);
-            }, OnError =>
-			{
+	            PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), OnGetUserInventorySuccess =>
+		    {
+	                coins = OnGetUserInventorySuccess.VirtualCurrency[PlayFabPlusUtils.GetCurrencyCode()];
+	                OnGetVirtualCurrenySuccess.Invoke(coins);
+	            }, OnError =>
+		    {
 				OnGetVirtualCurrenyFailed.Invoke(0);
-            });
+	            });
 
-			return 0;
-        }
+		    return 0;
+        	}
+		public void AddVritualCurrency(int amount)
+		}
+		      //execute a cloud script
+	        {
     }
 
 	public static class PlayFabPlusUtils
